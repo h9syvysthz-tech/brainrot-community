@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111827">
+<meta name="description" content="ブレインロット系オープンチャットの紹介ページ。交換・価値聞き・雑談・情報共有など。">
+<title>BRAINROT COMMUNITY | LINEオープンチャット</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;color:#fff;background:#15152f}
+body{overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-20%;z-index:-3;background:
+radial-gradient(circle at 10% 12%,rgba(255,55,190,.55),transparent 25%),
+radial-gradient(circle at 88% 15%,rgba(0,238,255,.46),transparent 27%),
+radial-gradient(circle at 78% 70%,rgba(125,85,255,.48),transparent 30%),
+radial-gradient(circle at 22% 82%,rgba(0,255,170,.28),transparent 25%),
+radial-gradient(circle at 52% 42%,rgba(255,170,0,.14),transparent 24%),
+linear-gradient(135deg,#24105a 0%,#173c78 32%,#155d72 58%,#4a175e 82%,#24103f 100%);animation:bg 10s ease-in-out infinite alternate}
+body:after{content:"";position:fixed;inset:0;z-index:-2;opacity:.24;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(rgba(0,255,255,.7) 1px,transparent 1px);background-size:34px 34px,57px 57px;animation:stars 18s linear infinite}
+@keyframes bg{to{transform:scale(1.08) rotate(2deg);filter:hue-rotate(15deg)}}
+@keyframes stars{to{background-position:120px 80px}}
+.wrap{width:min(1100px,92%);margin:auto;padding:28px 0 55px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:8px 0 24px}
+.logo{font-weight:900;letter-spacing:2px;font-size:18px}
+.logo span{color:#7cf8ff}
+.badge{font-size:12px;padding:8px 12px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.06);backdrop-filter:blur(10px)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center;padding:42px 0 30px}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#8efaff;font-weight:800;font-size:13px;letter-spacing:1.5px}
+.dot{width:8px;height:8px;border-radius:50%;background:#4dff88;box-shadow:0 0 16px #4dff88;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{transform:scale(1.55);opacity:.55}}
+h1{font-size:clamp(42px,8vw,82px);line-height:.94;margin:16px 0 20px;font-weight:1000;letter-spacing:-3px;text-shadow:0 0 35px rgba(107,220,255,.22)}
+h1 .grad{background:linear-gradient(90deg,#fff,#8ffaff,#b98cff,#ff79c9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(16px,2vw,20px);line-height:1.8;color:#d6dcf3;max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 22px;border-radius:16px;text-decoration:none;color:#fff;font-weight:900;transition:.25s;position:relative;overflow:hidden}
+.btn:before{content:"";position:absolute;inset:-80% 45% auto -20%;height:200%;background:rgba(255,255,255,.28);transform:rotate(25deg);transition:.5s}
+.btn:hover:before{left:110%}
+.btn:hover{transform:translateY(-3px) scale(1.02)}
+.primary{background:linear-gradient(135deg,#00c853,#00a884);box-shadow:0 12px 35px rgba(0,220,150,.25)}
+.secondary{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px)}
+.qr-card{position:relative;justify-self:center;width:min(370px,100%);padding:24px;border-radius:30px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);box-shadow:0 25px 80px rgba(0,0,0,.35);backdrop-filter:blur(18px);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-9px)}}
+.qr-glow{position:absolute;inset:-30px;border-radius:50%;background:radial-gradient(circle,rgba(105,237,255,.18),transparent 65%);z-index:-1;filter:blur(10px)}
+.qr{background:#fff;padding:16px;border-radius:22px}
+.qr img{display:block;width:100%;height:auto;border-radius:10px}
+.qr-title{font-size:19px;font-weight:900;text-align:center;margin:17px 0 5px}
+.qr-sub{text-align:center;color:#b9c3df;font-size:13px}
+.section-title{font-size:30px;margin:48px 0 20px}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.card{padding:22px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);backdrop-filter:blur(10px);transition:.25s}
+.card:hover{transform:translateY(-5px);background:rgba(255,255,255,.09)}
+.icon{font-size:30px}
+.card h3{margin:12px 0 7px;font-size:17px}
+.card p{margin:0;color:#aeb8d2;line-height:1.65;font-size:14px}
+.join{margin-top:34px;text-align:center;padding:45px 20px;border-radius:30px;background:linear-gradient(135deg,rgba(31,41,83,.8),rgba(13,58,64,.72));border:1px solid rgba(120,245,255,.2);position:relative;overflow:hidden}
+.join:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(0,255,209,.08);filter:blur(25px);right:-120px;top:-160px}
+.join h2{font-size:32px;margin:0 0 10px}
+.join p{color:#c7d0e6;margin:0 0 22px}
+footer{text-align:center;color:#7e89a7;font-size:12px;margin-top:28px}
+@media(max-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:25px}.qr-card{width:min(330px,100%)}.cards{grid-template-columns:1fr 1fr}h1{letter-spacing:-2px}}
+@media(max-width:480px){.wrap{width:90%}.cards{grid-template-columns:1fr}.actions .btn{width:100%}nav{padding-top:4px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">BRAIN<span>ROT</span> COMMUNITY</div>
+    <div class="badge">LINE OPENCHAT</div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> NOW OPEN / JOIN US</div>
+        <h1><span class="grad">BRAINROT</span><br>COMMUNITY</h1>
+        <p class="lead">
+          ブレインロット系ゲームが好きな人が集まるLINEオープンチャット。<br>
+          「ブレインロットを盗む」「ブレインロットファイト」「卵を盗む」などの話題で盛り上がろう！
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="https://line.me/ti/g2/J3IKdEngThKLmfhBHqTupM3Hk-SnU7LiqTO94A?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">🟢 LINEオープンチャットに参加する</a>
+          <a class="btn secondary" href="#about">コミュニティを見る ↓</a>
+        </div>
+      </div>
+
+      <div class="qr-card">
+        <div class="qr-glow"></div>
+        <div class="qr"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArIAAAKyCAIAAACmG6rXAAAT7UlEQVR4nO3csY7j2JZFwZeD/P9f7nGWUUaD03h3bp9DKcItpESRlGqBxv7566+//gMA8J///M/0AQAAW8gCACCyAACILAAAIgsAgMgCACCyAACILAAAIgsAgMgCACCyAACILAAAIgsAgMgCACCyAACILAAAIgsAgMgCACCyAACILAAAIgsAgMgCACCyAACILAAAIgsAgMgCACCyAACILAAAIgsAgMgCACCyAACILAAAIgsAgMgCACCyAACILAAAIgsAgMgCACCyAADI79Qb//z8TL31JX/99delVz45V1NHdfK+J698729P3Dvmnd54FZ5N3ZPPdp6rZ/d+zfyf8v/F0wIAILIAAIgsAAAiCwCAyAIAILIAAIgsAAAiCwCAyAIAIGMrh892LrudrGjtXODauZ84tWO4c2/u3vveO1f31ujuvfIbtyZ3Ln6+8VxN2fn/gqcFAEBkAQAQWQAARBYAAJEFAEBkAQAQWQAARBYAAJEFAECWrhw+u7cMNbWE9XnbbfdW0nYe88krv3ET8MS9NcmTV965jzl1VCd2Lvc9+7z/U054WgAARBYAAJEFAEBkAQAQWQAARBYAAJEFAEBkAQAQWQAA5JUrh59nagXv23budm7GvXHHcOpc7dxtnPr+3vNty5v8ydMCACCyAACILAAAIgsAgMgCACCyAACILAAAIgsAgMgCACBWDleYWoXbaef24s79tTce1dTG5ZSdG6bfto/JP+dpAQAQWQAARBYAAJEFAEBkAQAQWQAARBYAAJEFAEBkAQCQV64cft4S1sny18la2b2ls3tHdeLeeT5xb1Fu5zFPLTN+3r7e1Pf32RvP886jmuJpAQAQWQAARBYAAJEFAEBkAQAQWQAARBYAAJEFAEBkAQCQpSuHUztoU3ZuAj6bWlf8vL99dm/Jbucx3/u8J3Z+B+954w7pySvzJ08LAIDIAgAgsgAAiCwAACILAIDIAgAgsgAAiCwAACILAID8fN4+1+d54yrczqO6597+2s4FzJ3HfHJffd4d+8ZNQP8fbeBpAQAQWQAARBYAAJEFAEBkAQAQWQAARBYAAJEFAEBkAQCQ3+kD+G/sXEl7o6lNsalNwBPP73tyVPf29b7tfn42tWP4xrv92dT7vnHv9dnOVUdPCwCAyAIAILIAAIgsAAAiCwCAyAIAILIAAIgsAAAiCwCA/OxcWdq5Y3iyovXGXbDP4+r/yffon5vaQNx5nt/4t/d83ifytAAAiCwAACILAIDIAgAgsgAAiCwAACILAIDIAgAgsgAAyO/UG5+sd00tQ9075mc7twin9tdO3Nv127kYeO/OObmCU2dy5/foxOftCe78jf22+8rTAgAgsgAAiCwAACILAIDIAgAgsgAAiCwAACILAIDIAgAgP1MLTTsXqXbugr1xcWznuZoydY3urUnu/ERT77tz8fPbfnOe7dwi3Lmf6GkBABBZAABEFgAAkQUAQGQBABBZAABEFgAAkQUAQGQBAJDf6QP4e/eWv07ce9+d64onTs7VySd642bcyfvu/Lz33Lvbd/7mPNv5yzB1rt646rjzW+ZpAQAQWQAARBYAAJEFAEBkAQAQWQAARBYAAJEFAEBkAQCQn50rS/c2p6Ze+dnUVt0bt9ue3ftEU4tyO5cZd16je+5d/ak79sTUKuvOv71n6n9nTwsAgMgCACCyAACILAAAIgsAgMgCACCyAACILAAAIgsAgPxOvfHJbtS9/bWd73uywLVzL/Le1X+2c03y5CrsXGfbuSi381yd+Lzfus+7c95413laAABEFgAAkQUAQGQBABBZAABEFgAAkQUAQGQBABBZAABkbOXwjbtRU9teU964RHlvMfDZznM19YlOfNsxT7l3rt64FnrvmO/97T2eFgAAkQUAQGQBABBZAABEFgAAkQUAQGQBABBZAABEFgAAGVs53LkKd/K+U3buZN1bK7u3cTm1sPbsjaudz+5do52LkG88z2/0eVdh6pg9LQAAIgsAgMgCACCyAACILAAAIgsAgMgCACCyAACILAAA8vPG7acTOzcB37hkt3O962TpbOoTvfF9p7zxPD+b+u7f+6bs/HafvPKJnf/jPPO0AACILAAAIgsAgMgCACCyAACILAAAIgsAgMgCACCyAADI7/QB/L2de1X3Nrbufd6pY546qp2m7skTb7wKO/cin1/5jZuAb9x8fLbzf5wpnhYAAJEFAEBkAQAQWQAARBYAAJEFAEBkAQAQWQAARBYAAPnZuWU2tYJ38r73/vbEvfedWoV7467f1OfdeY12ft57vm2579698ezzzvPU/expAQAQWQAARBYAAJEFAEBkAQAQWQAARBYAAJEFAEBk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" alt="LINEオープンチャット招待QRコード"></div>
+        <div class="qr-title">QRコードから参加</div>
+        <div class="qr-sub">スマホで読み取ってオープンチャットへ</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">このオープンチャットでは</h2>
+      <div class="cards">
+        <div class="card"><div class="icon">🔄</div><h3>交換</h3><p>ゲーム内アイテムなどの交換について交流できます。</p></div>
+        <div class="card"><div class="icon">💎</div><h3>価値聞き</h3><p>アイテムの価値や相場について情報交換できます。</p></div>
+        <div class="card"><div class="icon">💬</div><h3>雑談</h3><p>ゲームの話から日常のちょっとした雑談まで楽しめます。</p></div>
+        <div class="card"><div class="icon">🎁</div><h3>情報共有</h3><p>イベントや配布など、ゲーム関連の情報を共有できます。</p></div>
+        <div class="card"><div class="icon">🎉</div><h3>大量配布</h3><p>大量配布をコンセプトに、みんなで楽しめる配布企画や情報を共有します。</p></div>
+      </div>
+    </section>
+
+    <section class="join">
+      <h2>さあ、コミュニティへ！</h2>
+      <p>下のボタンからLINEオープンチャットを開けます。</p>
+      <a class="btn primary" href="https://line.me/ti/g2/J3IKdEngThKLmfhBHqTupM3Hk-SnU7LiqTO94A?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">LINEオープンチャットに参加する →</a>
+    </section>
+  </main>
+
+  <footer>© BRAINROT COMMUNITY · This page is an unofficial community introduction.</footer>
+</div>
+</body>
+</html>
